@@ -42,5 +42,5 @@ watch: node coa_read
 	watch -n 0.2 ./tools/coa_read
 
 clean:
-	rm -rf com_on_air_cs.ko com_on_air_cs.mod.c .com_on_air* .sc14421* .tmp* Module.symvers modules.order *.o
+	rm -rf com_on_air_cs.ko com_on_air_cs.mod.c .com_on_air* .sc14421* .tmp* Module.symvers modules.order *.o *.o.cmd
 
