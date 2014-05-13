@@ -94,6 +94,10 @@ void print_help(void)
 	LOG("   dump               - dump stations and calls we have seen\n");
 	LOG("   name <rfpi> <name> - name stations we have seen\n");
 	LOG("   hop                - toggle channel hopping, currently %s\n", cli.hop ? "ON":"OFF");
+	LOG("   realtime           - toggle realtime audio, currently %s\n", cli.audioPlay ? "ON":"OFF");
+	LOG("   direction          - toggle realtime audio direction, currently %s\n", cli.channelPlaying ? "FP":"PP");
+	LOG("   wav                - toggle wav dumping, currently %s\n", cli.wavDump ? "ON":"OFF");
+	LOG("   ima                - toggle ima dumping, currently %s\n", cli.imaDump ? "ON":"OFF");
 	LOG("   verb               - toggle verbosity, currently %s\n", cli.verbose ? "ON":"OFF");
 	LOG("   mode               - report current mode, currently %s\n", get_cli_mode());
 	LOG("   stop               - stop it - whatever we were doing\n");
