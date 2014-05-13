@@ -643,15 +643,14 @@ void do_hop(void)
 void do_audio(void)
 {
 	cli.audioPlay = cli.audioPlay ? 0:1;
-	LOG("### Audio playing turned %s\n", cli.audioPlay ? "ON":"OFF");
+	LOG("### Realtime audio turned %s\n", cli.audioPlay ? "ON":"OFF");
 }
 
 void do_direction(void)
 {
 	cli.channelPlaying = cli.channelPlaying ? 0:1;
-	LOG("### Audio channel playing: %s\n", cli.channelPlaying ? "FP":"PP");
+	LOG("### Realtime audio channel playing: %s\n", cli.channelPlaying ? "FP":"PP");
 }
-
 
 void do_wav(void)
 {
@@ -797,7 +796,7 @@ void process_cli_data()
 		{ do_add_name(&buf[4]); done = 1; }
 	if ( !strncasecmp((char *)buf, "hop", 3) )
 		{ do_hop(); done = 1; }
-	if ( !strncasecmp((char *)buf, "audio", 5) )
+	if ( !strncasecmp((char *)buf, "realtime", 8) )
 		{ do_audio(); done = 1; }
 	if ( !strncasecmp((char *)buf, "direction", 9) )
 		{ do_direction(); done = 1; }
